@@ -1,0 +1,89 @@
+$yellow: #efa820;
+
+// Media Queries
+
+@mixin device480 {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin device800 {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin device1020 {
+  @media (min-width: #{$standard-width}) {
+    @content;
+  }
+}
+
+@mixin device1200 {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin device1600 {
+  @media (min-width: #{$full-width}) {
+    @content;
+  }
+}
+
+// Type
+
+@mixin prettyheading {
+  font-family: "abril fatface";
+  font-size: 3rem;
+  color: #f6f6f6;
+  @include device1020{
+    font-size: 4rem;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@mixin orangebullet {
+  color: $orange;
+  margin-left: 1rem;
+}
+
+@mixin p {
+  padding: 2rem 0rem;
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: #f6f6f6;
+  @include device1020{
+    padding: 3rem 0rem;
+  }
+}
+
+@mixin underline {
+  margin-bottom: 1rem;
+}
+
+//button
+
+@mixin btn {
+  padding: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  border: 1px solid white;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+  margin-top: initial;
+  @include device1020{
+    margin-top: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
